@@ -16,6 +16,13 @@ import { DetailModule } from './detail/detail.module';
 
 import { AppComponent } from './app.component';
 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { DragDropModule } from '@angular/cdk/drag-drop';
+import {MatGridListModule} from '@angular/material/grid-list';
+import {MatInputModule} from '@angular/material/input';
+import {MatIconModule} from '@angular/material/icon';
+import {MatListModule} from '@angular/material/list';
+
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -32,6 +39,12 @@ export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
     HomeModule,
     DetailModule,
     AppRoutingModule,
+    BrowserAnimationsModule,
+    MatGridListModule,
+    MatInputModule,
+    MatIconModule,
+    MatListModule,
+    DragDropModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
