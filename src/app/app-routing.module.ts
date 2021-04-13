@@ -5,11 +5,12 @@ import { PageNotFoundComponent } from './shared/components';
 import { HomeRoutingModule } from './home/home-routing.module';
 import { DetailRoutingModule } from './detail/detail-routing.module';
 
+import { TodoComponent } from './home/todo/todo.component';
+
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'home',
-    pathMatch: 'full'
+    component : TodoComponent
   },
   {
     path: '**',
